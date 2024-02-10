@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@700&family=Montserrat:ital,wght@0,800;1,900&family=Poppins:wght@800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    color: aliceblue;
+    text-decoration: none;
+
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+main{
+    width: 100%;
+}
+.flex{
+    width: 100%;
+}
+.bg{
+    padding: 20px;
+    height: 100vh;
+    background-image: url(/source/rimba2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* position: absolute; */
+}
+.lay{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 100px;
+    width: 300px;
+
+    border-radius: 50px;
+    border: solid aliceblue;
+    backdrop-filter: blur(5px);
+    text-align: center;
+}
+h1{
+    margin-bottom: 20px;
+}
+.lay input{
+    border-radius: 50px;
+    padding: 10px;
+    color: black;
+}
+.lay button{
+    font-size: 25px;
+    width: 100%;
+    border-radius: 50px;
+    color: black;
+    padding: 20px;
+    margin-top: 70px;
+}
+
+
+
+@media screen and (max-width: 426px) {
+    .lay{
+        padding: 0px;
+    }
+    h1{
+        margin: 20px;
+    }
+    .lay button{
+        font-size: 15px;
+        width: 60%;
+        margin: 20px;
+    }
+}

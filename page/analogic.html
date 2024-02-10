@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+  }
+  a{
+    color: aliceblue;
+  }
+  .navbar{
+    background-color: brown;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 15px 35px;
+  }
+  .navbar .logo{
+    font-weight: lighter;
+    font-family: cursive;
+    font-size: 20px;
+  }
+  .navbar .navbar-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  a:hover{
+    color: aqua;
+    transition: .3s;
+  }
+  @media screen and (max-width: 768px) {
+    
+.toggle-menu{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+  margin-right: -10px ;
+}
+
+.toggle-menu span{
+  display: block;
+  height: 4px;
+  width: 30px;
+  background-color: burlywood;
+}
+.navbar i{
+  position: relative;
+  padding: 20px;
+}
+.navbar .navbar-nav{
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -300px;
+  right: 0;
+  background-color: brown;
+  padding: 35px 0px;
+}
+
+.navbar .navbar-nav.show{
+  top: 50px;
+}
+  }
+</style>
+<body>
+  
+  <nav class="navbar">
+    <a href="" class="logo">logo</a>
+    <div class="toggle-menu" id="toggle-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="navbar-nav" id="navbar-nav">
+      <li><a href="" class="nav-link">Home</a></li>
+      <li><a href="" class="nav-link">About</a></li>
+      <li><a href="" class="nav-link">Example</a></li>
+      <li><a href="" class="nav-link">Example</a></li>
+      <li><a href="" class="nav-link">Example</a></li>
+    </ul>
+  </nav>
+  <script>
+
+    const toggleShow = document.getElementById('toggle-menu');
+    const nav = document.getElementById('navbar-nav');
+    const navLink = document.querySelectorAll('.nav-link');
+
+    toggleShow.addEventListener('click', function() {
+      nav.classList.toggle('show');
+    })
+
+    for ( let i = 0; i < navLink.length; i++ ) {
+      navLink[i].addEventListener('click', () => {
+        nav.classList.toggle('show');
+      })
+    }
+  </script>
+</body>
+</html>
