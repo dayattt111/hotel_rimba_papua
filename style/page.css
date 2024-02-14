@@ -13,19 +13,20 @@
 }
 
 body{
-    background-color: brown;
+    background-color: #274625;
 }
 nav a{
     color: aliceblue;
 }
 .navbar{
-    background-color: darkred;
+    width: 100%;
+    background-color: #828b7d ;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 50px;
     padding: 15px 30px;
-    border-bottom: 4px solid black;
+    border-bottom: 15px solid #ada79d;
 }
 .call{
     align-items: center;
@@ -41,7 +42,8 @@ nav a{
     gap: 20px;
 }
 nav a:hover{
-    color: aqua;
+    border-bottom: solid black 10px;
+    color: #000;
     transition: .3s;
 }
 .nav_fx{
@@ -56,15 +58,15 @@ nav a:hover{
 }
 
 
-
 figure {
-    background-color: brown;
+    /* background-color: brown; */
     padding: 60px 100px 0px 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     text-align: center;
+    /* margin-top: 200px; */
 }
 .konten{
     height: 400px;
@@ -77,8 +79,11 @@ figure {
     transition: .3s;
 }
 .image img{
+    transition: .3s;
+    border: #828b7d solid 10px;
     height: 100%;
     width: 100%;
+    border-radius: 30px;
 }
 .konten .btn-slide{
     position: absolute;
@@ -94,14 +99,14 @@ figure {
     font-size: 10px;
     padding: 1px 15px;
     transition: .3s;
-    color: brown;
+    color: #274625;
     background-color: aliceblue;
     border-radius: 2px;
     cursor: grabbing;
 }
 .btn-slide span:hover{
-    background-color: brown;
-    color: brown;
+    background-color: #274625;
+    color: #274625;
     opacity: 0.5;
 }
 .konten .slide{
@@ -172,8 +177,6 @@ figure {
 .sc{
     background-color: gray; padding: 10px 50px; font-size: 25px;
 }
-
-
 article{
     padding: 50px;
 }
@@ -188,6 +191,7 @@ article img{
 }
 .pad{
     padding: 5px;
+    transition: .5s;
 }
 .cards{
     padding: 25px;
@@ -205,18 +209,10 @@ article img{
     text-align: center;
     padding: 5px;
 }
-
-
-
-
-
-
-
-
-
-
 footer{
-    background-color: burlywood;
+    border-bottom: 15px solid #ada79d;
+    transition: .3s;
+    background-color: #ada79d;
     width: 100%;
 }
 .foot_grid{
@@ -242,7 +238,6 @@ footer a{
 }
 
 
-
 @media screen and (max-width: 768px) {
 
     #tombol{
@@ -252,26 +247,39 @@ footer a{
         cursor: pointer;
         margin-right: -15px;
     }
+    .navbar{
+        height: 140px;
+        border-radius: 0px 0px 50px 50px;
+    }
     .navbar i{
         position: relative;
         font-size: 30px;
         padding: 20px;
+    }
+    .book{
+        border-radius: 15px;
+    }
+    .call{
+        font-size: 25px;
     }
     .nav_fx{
         flex-direction: column;
     }
     .navbar .navbar-nav{
         width: 100%;
+        background-color: #828b7d;
         flex-direction: column;
         justify-content: center;
         position: absolute;
-        top: -600px;
+        top: -800px;
         right: 0;
-        background-color: brown;
-        padding: 35px 0px;
+        border-radius: 0px 0px 50px 50px;
+        border-bottom: 15px solid #ada79d;
+
+        padding: 70px 0px;
     }
     .navbar .navbar-nav.show{
-        top: 110px;
+        top: 100px;
         z-index: 99;
     }
     figure {
@@ -309,23 +317,68 @@ footer a{
         text-align: center;
         padding: 20px 100px;
         display: flex;
-        gap: 50px;
+        gap: 10px;
         flex-direction: column;
+    }
+    footer{
+        border-top-left-radius: 35%;
+        border-top-right-radius: 35%;
     }
     .foot1, .foot2, .foot3{
         width: 100%;
+    }
+    .foot2{
+        display: none;
     }
 
 }
 @media screen and (max-width: 426px) {
 
-
+    .navbar .navbar-nav{
+        padding: 40px 0px;
+    }
+    .konten{
+        padding: 10px;
+    }
+    .konten .image{
+        height: auto;
+    }
+    .konten .slide{
+        top: 47%;
+    }
+    .slide.left{
+        left: 5px;
+    }
+    .slide.right{
+        right: 5px;
+    }
+    .txt_main h1{
+        font-size: 20px;
+    }
+    .txt_main h3{
+        font-size: 10px;
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+    .book{
+        width: 100%;
+        border-radius: 55px;
+    }
     footer{
         width: 100%;
     }
     footer h1{
-        font-size: 25px;
+        font-size: 20px;
         text-align: center;
+    }
+    .foot3 a{
+        font-size: 10px;
     }
     .foot-flex{
         text-align: center;
@@ -336,5 +389,15 @@ footer a{
     .foot_card{
         padding: 10px;
         border: none;
+    }
+    .foot_grid{
+        padding: 20px 10px;
+        gap: 0px;
+    }
+    .foot_grid p{
+        font-size: 10px;
+    }
+    .nn {
+        display: none;
     }
 }

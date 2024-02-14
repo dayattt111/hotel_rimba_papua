@@ -63,3 +63,13 @@ document.body.addEventListener('mousemove', function(event) {
     const yPos = Math.round((event.clientY / window.innerHeight) * 255);
     document.body.style.backgroundColor = 'rgb('+ xPos +','+ yPos +',100)'
 });
+
+const color = document.querySelector('#clr');
+const hexa = document.querySelector('.hexa');
+
+hexa.innerHTML = color.value;
+
+color.addEventListener('input', function() {
+    // hexa.innerHTML = color.value;
+    hexa.style.color = color.value;
+})

@@ -1,9 +1,11 @@
 const toggle = document.getElementById('tombol');
 const nav = document.getElementById('navbar-nav');
 const navLink = document.querySelectorAll('.nav-link');
+const navBar = document.getElementsByClassName('navbar');
 
 toggle.addEventListener('click', () => {
     nav.classList.toggle('show');
+    // navBar.style.background = 'black';
 });
 
 for ( let i = 0; i < navLink.length; i++ ) {

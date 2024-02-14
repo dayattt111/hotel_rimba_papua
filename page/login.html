@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Silahkan Registrasi</title>
-    <link rel="stylesheet" href="/style/login.css">
+    <link rel="stylesheet" href="../style/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@700&family=Montserrat:ital,wght@0,800;1,900&family=Poppins:wght@800;900&display=swap" rel="stylesheet">
@@ -16,15 +16,31 @@
             <div class="bg"></div>
             <div class="lay">
                 <h1>REGISTER</h1>
-                <form action="#">
+                <form class="form_submit">
                     <label for="#">Username</label><br>
-                    <input type="text"><br>
+                    <input id="username" type="text" placeholder="Masukkan Nama" autocomplete="off" autofocus required><br>
                     <label for="#">Password</label><br>
-                    <input type="password"><br>
-                    <button>Mendaftar</button>
+                    <input id="password" type="password" placeholder="Masukkan Password" autocomplete="off" required><br>
+                    <span class="error_msg">Username atau Password Salah!</span>
+                    <a href="page.html"><button onclick="">Mendaftar</button></a>
                 </form>
             </div>
         </div>
     </main>
+    <script>
+        
+
+        function Login() {
+        const username = document.querySelector('#username');
+        const password = document.querySelector('#password');
+
+            if (username === 'admin' && password === '123') {
+                alert('Selamat anda berhasil Login');
+            }
+            else {
+                alert('username atau password anda salah !');
+            }
+        }
+    </script>
 </body>
 </html>

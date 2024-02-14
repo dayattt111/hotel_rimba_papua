@@ -34,15 +34,18 @@ main{
     padding: 100px;
     width: 300px;
 
+    transition: .5s;
     border-radius: 50px;
     border: solid aliceblue;
     backdrop-filter: blur(5px);
     text-align: center;
 }
-h1{
+.lay h1{
+    transition: .6s;
     margin-bottom: 20px;
 }
 .lay input{
+    margin: 5px;
     border-radius: 50px;
     padding: 10px;
     color: black;
@@ -54,6 +57,10 @@ h1{
     color: black;
     padding: 20px;
     margin-top: 70px;
+}
+button a{
+    color: black;
+    text-transform: uppercase;
 }
 
 
