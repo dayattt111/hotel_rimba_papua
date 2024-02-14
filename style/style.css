@@ -17,7 +17,7 @@ main{
     width: 100%;
 }
 .bg{
-    background: url(/source/main_rimba.jpg);
+    background: url(../source/main_rimba.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     object-fit: cover;
